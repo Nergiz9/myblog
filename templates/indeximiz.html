@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHEHOSHHHHHH </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+<style>
+    body {
+        background-color: {{ reng }};
+    }
+
+</style>
+<h1>Bummmmm</h1>
+{% if pst %}
+    {% for i in pst %}
+        <h2>{{ i.title }}</h2>
+        {% autoescape off %}
+            <p>{{ i.body }}</p>
+
+        {% endautoescape %}
+        <address>{{ i.seem }}</address>
+        <code>{{ i.publish }}</code>
+    {% endfor %}
+
+{% endif %}
+<br/>
+{{ form }}
+
+</body>
+</html>
